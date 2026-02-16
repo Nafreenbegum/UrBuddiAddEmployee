@@ -2,7 +2,7 @@ export class LoginPage {
   constructor(page) {
     this.page = page;
 
-    // Simple locators
+    // Login into the urbuddi 
     this.email = page.locator('input[type="email"]');
     this.password = page.locator('input[type="password"]');
     this.loginBtn = page.locator('button[type="submit"]');

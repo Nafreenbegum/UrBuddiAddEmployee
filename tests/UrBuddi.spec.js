@@ -32,7 +32,13 @@ await addEmployeePage.addEmployee({
   joiningDate: '2024-01-15',
   qualification: 'Degree',
   Department: 'QA',
-  Gender: 'Male',
+  Gender: 'Female',
+  MobileNum: '9845728383',
+  bloodGroup: 'A+',
+  Designation:'QA Engineer',
+  salary:'10000',
+  Location:'Hyderabad',
+  reportingTo:'adae@sttr.com'
   
 
 });
