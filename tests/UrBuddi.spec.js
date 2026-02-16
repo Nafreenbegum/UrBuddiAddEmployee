@@ -32,7 +32,7 @@ await addEmployeePage.addEmployee({
   joiningDate: '2024-01-15',
   qualification: 'Degree',
   Department: 'QA',
-  Gender: 'Female',
+  Gender: 'Male',
   
 
 });
