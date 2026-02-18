@@ -1,9 +1,11 @@
+import { expect } from "@playwright/test";
+
 export class AddEmployeePage {
   constructor(page) {
     this.page = page;
 
     this.addEmployeeBtn = page.locator("//button[text()='Add Employee']");
-    this.saveBtn = page.locator("//button[text()='Add']");
+    this.addBtn = page.locator("//button[text()='Add']");
 
     this.firstName = page.locator("//input[@name='firstName']");
     this.lastName = page.locator("//input[@name='lastName']");
@@ -21,6 +23,9 @@ export class AddEmployeePage {
     this.salary = page.locator("//input[@name='salary']");
     this.Location = page.locator("//input[@name='location']");
     this.reportingTo = page.locator("//select[@name='reportingTo']");
+    this.CheckBox=page.locator("//input[@id='ag-905-input']");
+    const delteText = this.page.locator("//p[@class='pt-3']");
+    this.deleteBtn =this.page.locator("//button[@class='deleteIcon']");
   }
 
   async openAddEmployeeForm() {
@@ -28,7 +33,6 @@ export class AddEmployeePage {
   }
 
   async addEmployee(data) {
-    console.log("DATA RECEIVED:", data); // keep this temporarily
 
     await this.firstName.fill(data.firstName);
     await this.lastName.fill(data.lastName);
@@ -48,9 +52,11 @@ export class AddEmployeePage {
     await this.reportingTo.selectOption(data.reportingTo);
   }
 
-  async save() {
-    await this.saveBtn.click();
-  }
+  async add() {
+    await this.addBtn.click();
+  await this.CheckBox.check();
+  await this.deleteBtn.click(data.deleteBtn);
+}
 }
 
 

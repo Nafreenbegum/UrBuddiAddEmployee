@@ -6,6 +6,7 @@ export class LoginPage {
     this.email = page.locator('input[type="email"]');
     this.password = page.locator('input[type="password"]');
     this.loginBtn = page.locator('button[type="submit"]');
+
   }
 
   async login(email, password) {
