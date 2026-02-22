@@ -1,33 +1,42 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { AddEmployeePage } from '../pages/AddEmployeePage';
 import { generateEmployee } from '../utils/fakerData.js';
 
-test('Add Employee with Faker data', async ({ page }) => {
+test('Login → Add → Delete Employee Complete Flow', async ({ page }) => {
 
-  // Step 1: Login
   const loginPage = new LoginPage(page);
-  await loginPage.login('nafreenbegum123@optimworks.com', 'Nafreen@123');
-
-  // Verify login
-  await expect(page.locator("//img[@class='company-logo-header']")).toBeVisible();
-
-  // Step 2: Navigate to Employees page
-  await page.goto('https://dev.urbuddi.com/allemployees');
-
-  // Step 3: Open Add Employee form
   const addEmployeePage = new AddEmployeePage(page);
+
+  // 🔐 Login
+  await loginPage.login(
+    'nafreenbegum123@optimworks.com',
+    'Nafreen@123'
+  );
+
+  // ➕ Add Employee
   await addEmployeePage.openAddEmployeeForm();
 
-  // Step 4: Generate Faker employee data
-  const employee = generateEmployee();
+  const employee = await generateEmployee();
 
-  // Step 5: Fill the form with Faker data
   await addEmployeePage.addEmployee(employee);
+  await addEmployeePage.submit();
 
-  // Step 6: Submit the form
-  await addEmployeePage.add();
+  console.log('Employee Added:', employee.firstName);
 
-  // Optional: log the generated data
-  console.log('Employee added:', employee);
+  // 🔎 Search Employee
+  await addEmployeePage.searchEmployee(employee.firstName);
+
+  // ✅ Select Correct Row Checkbox
+  await addEmployeePage.selectEmployeeByName(employee.firstName);
+
+  // ✅ Validate Selection Text
+  await addEmployeePage.validateSelectionText();
+
+  // 🗑 Delete Employee
+  await addEmployeePage.deleteEmployee();
+
+  // ✅ Validate Success Message
+  await addEmployeePage.validateDeleteSuccess();
+
 });
