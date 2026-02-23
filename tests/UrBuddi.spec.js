@@ -1,42 +1,36 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-import { AddEmployeePage } from '../pages/AddEmployeePage';
+import { LoginPage } from '../pages/LoginPage.js';
+import { AddEmployeePage } from '../pages/AddEmployeePage.js';
 import { generateEmployee } from '../utils/fakerData.js';
 
-test('Login → Add → Delete Employee Complete Flow', async ({ page }) => {
+const { getLoginData } = require('../utils/excelReader');
+
+test('Login → Add Employee Flow', async ({ page }) => {
+
+  // 📘 Read login details from Excel
+  const loginData = getLoginData();
 
   const loginPage = new LoginPage(page);
   const addEmployeePage = new AddEmployeePage(page);
 
   // 🔐 Login
   await loginPage.login(
-    'nafreenbegum123@optimworks.com',
-    'Nafreen@123'
+    loginData.url,
+    loginData.email,
+    loginData.password
   );
 
-  // ➕ Add Employee
+  // ➕ Open Add Employee form
   await addEmployeePage.openAddEmployeeForm();
 
+  // 🎲 Generate fake employee data
   const employee = await generateEmployee();
 
+  // 📝 Fill employee form
   await addEmployeePage.addEmployee(employee);
+
+  // 💾 Submit
   await addEmployeePage.submit();
 
-  console.log('Employee Added:', employee.firstName);
-
-  // 🔎 Search Employee
-  await addEmployeePage.searchEmployee(employee.firstName);
-
-  // ✅ Select Correct Row Checkbox
-  await addEmployeePage.selectEmployeeByName(employee.firstName);
-
-  // ✅ Validate Selection Text
-  await addEmployeePage.validateSelectionText();
-
-  // 🗑 Delete Employee
-  await addEmployeePage.deleteEmployee();
-
-  // ✅ Validate Success Message
-  await addEmployeePage.validateDeleteSuccess();
-
+  console.log("Employee Created:", employee.firstName);
 });

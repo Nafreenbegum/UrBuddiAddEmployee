@@ -1,0 +1,16 @@
+
+    {
+  "password": "Test@123",
+  "dob": "1998-06-05",
+  "joiningDate": "2024-01-15",
+  "Department": "testing",
+  "MobileNum": "9845728383",
+  "role": "Employee",
+  "Gender": "Female",
+  "bloodGroup": "A+",
+  "qualification": "Degree",
+  "Designation": "QA Engineer",
+  "salary": "35000",
+  "Location": "Hyderabad",
+  "reportingTo": "pragathi123@optimworks.com"
+}

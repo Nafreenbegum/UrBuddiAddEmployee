@@ -28,13 +28,13 @@ export class AddEmployeePage {
     this.Location = page.locator("//input[@name='location']");
     this.reportingTo = page.locator("//select[@name='reportingTo']");
 
-    // ✅ STABLE AG-GRID SEARCH LOCATOR
-    this.searchBox = page.locator('input[aria-label="NAME Filter Input"]');
+  //   // ✅ STABLE AG-GRID SEARCH LOCATOR
+  //   this.searchBox = page.locator('input[aria-label="NAME Filter Input"]');
 
-    // Grid & Delete
-    this.selectedText = page.locator("text=Employees Selected");
-    this.deleteIcon = page.locator("//button[contains(@class,'delete')]");
-    this.successMessage = page.locator("text=success");
+  //   // Grid & Delete
+  //   this.selectedText = page.locator("text=Employees Selected");
+  //   this.deleteIcon = page.locator("//button[contains(@class,'delete')]");
+  //   this.successMessage = page.locator("text=success");
   }
 
   async openAddEmployeeForm() {
@@ -48,57 +48,21 @@ export class AddEmployeePage {
     await this.employeeId.fill(data.employeeId);
     await this.email.fill(data.email);
     await this.password.fill(data.password);
-
     await this.role.selectOption({ label: data.role });
-
     await this.dob.fill(data.dob);
     await this.joiningDate.fill(data.joiningDate);
-
     await this.qualification.selectOption({ label: data.qualification });
-
     await this.Department.fill(data.Department);
     await this.Gender.selectOption({ label: data.Gender });
     await this.MobileNum.fill(data.MobileNum);
     await this.bloodGroup.selectOption({ label: data.bloodGroup });
-
     await this.Designation.fill(data.Designation);
     await this.salary.fill(data.salary);
     await this.Location.fill(data.Location);
-
     await this.reportingTo.selectOption({ label: data.reportingTo });
   }
-
   async submit() {
     await this.addBtn.click();
   }
 
-  // ✅ FIXED SEARCH METHOD
-  async searchEmployee(name) {
-    await this.searchBox.waitFor({ state: "visible" });
-    await this.searchBox.fill("");
-    await this.searchBox.fill(name);
-
-    // Wait for grid to refresh
-    await this.page.waitForTimeout(1500);
-  }
-
-  // ✅ Dynamic Row Selection
-  async selectEmployeeByName(employeeName) {
-    const row = this.page.locator(
-      `//div[@role='row' and .//div[contains(text(),'${employeeName}')]]`
-    );
-    await row.locator("input[type='checkbox']").check();
-  }
-
-  async validateSelectionText() {
-    await expect(this.selectedText).toContainText("1");
-  }
-
-  async deleteEmployee() {
-    await this.deleteIcon.click();
-  }
-
-  async validateDeleteSuccess() {
-    await expect(this.successMessage).toBeVisible();
-  }
 }

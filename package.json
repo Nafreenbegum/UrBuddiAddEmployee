@@ -11,7 +11,8 @@
   "devDependencies": {
     "@faker-js/faker": "^10.3.0",
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.0.10"
+    "@types/node": "^25.0.10",
+    "allure-playwright": "^3.4.5"
   },
   "directories": {
     "test": "tests"
@@ -19,7 +20,8 @@
   "dependencies": {
     "playwright": "^1.58.0",
     "playwright-core": "^1.58.0",
-    "undici-types": "^7.16.0"
+    "undici-types": "^7.16.0",
+    "xlsx": "^0.18.5"
   },
   "repository": {
     "type": "git",
