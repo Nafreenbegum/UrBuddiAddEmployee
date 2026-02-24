@@ -6,7 +6,6 @@ import { generateEmployee } from '../utils/fakerData.js';
 const { getLoginData } = require('../utils/excelReader');
 
 test('Login → Add Employee Flow', async ({ page }) => {
-
   // 📘 Read login details from Excel
   const loginData = getLoginData();
 
@@ -29,8 +28,8 @@ test('Login → Add Employee Flow', async ({ page }) => {
   // 📝 Fill employee form
   await addEmployeePage.addEmployee(employee);
 
-  // 💾 Submit
-  await addEmployeePage.submit();
+  // 💾 Submit and validate both status + grid
+  await addEmployeePage.submitAndValidate();
 
-  console.log("Employee Created:", employee.firstName);
+  console.log("✅ Employee Created & Verified:", employee.firstName, employee.employeeId);
 });

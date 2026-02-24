@@ -27,14 +27,10 @@ export class AddEmployeePage {
     this.salary = page.locator("//input[@name='salary']");
     this.Location = page.locator("//input[@name='location']");
     this.reportingTo = page.locator("//select[@name='reportingTo']");
+    this.searchBox = page.locator("//input[@aria-label='EMP ID Filter Input']");
 
-  //   // ✅ STABLE AG-GRID SEARCH LOCATOR
-  //   this.searchBox = page.locator('input[aria-label="NAME Filter Input"]');
-
-  //   // Grid & Delete
-  //   this.selectedText = page.locator("text=Employees Selected");
-  //   this.deleteIcon = page.locator("//button[contains(@class,'delete')]");
-  //   this.successMessage = page.locator("text=success");
+    // Status message locator
+    this.statusMessage = page.locator("div[role='status']");
   }
 
   async openAddEmployeeForm() {
@@ -60,9 +56,27 @@ export class AddEmployeePage {
     await this.salary.fill(data.salary);
     await this.Location.fill(data.Location);
     await this.reportingTo.selectOption({ label: data.reportingTo });
-  }
-  async submit() {
-    await this.addBtn.click();
+
+    // Store employeeId for later search/validation
+    this.newEmployeeId = data.employeeId;
   }
 
+  async submitAndValidate() {
+    await this.addBtn.click();
+
+    // ✅ Validate status message
+    await expect(this.statusMessage).toHaveText("Saved Successfully", { timeout: 10000 });
+
+    // Fill search box and trigger search
+    await this.searchBox.fill(this.newEmployeeId);
+    await this.page.keyboard.press("Enter");
+
+    // Validate employee appears in grid
+    const rowLocator = this.page.locator(
+      `.ag-center-cols-container .ag-cell[col-id="empId"]`,
+      { hasText: this.newEmployeeId }
+    );
+
+    await expect(rowLocator).toBeVisible({ timeout: 30000 });
+  }
 }

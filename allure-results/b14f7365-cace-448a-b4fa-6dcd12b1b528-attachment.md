@@ -1,0 +1,533 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e4]:
+    - link "logo" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img "logo" [ref=e6]
+    - generic [ref=e7]:
+      - button [ref=e8] [cursor=pointer]:
+        - img [ref=e10]
+      - button "profile-pic" [ref=e12] [cursor=pointer]:
+        - link "profile-pic" [ref=e13]:
+          - /url: /profile
+          - img "profile-pic" [ref=e14]
+  - generic [ref=e16]:
+    - navigation [ref=e18]:
+      - list [ref=e19]:
+        - listitem [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - link "Dashboard" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - listitem [ref=e24]:
+            - img [ref=e26]
+            - paragraph [ref=e29]: Dashboard
+        - link "Employees" [ref=e30] [cursor=pointer]:
+          - /url: /allemployees
+          - listitem [ref=e31]:
+            - img [ref=e33]
+            - paragraph [ref=e36]: Employees
+        - link "Leave Management" [ref=e37] [cursor=pointer]:
+          - /url: /leave_management
+          - listitem [ref=e38]:
+            - img [ref=e40]
+            - paragraph [ref=e42]: Leave Management
+        - link "Salary Management" [ref=e43] [cursor=pointer]:
+          - /url: /salary
+          - listitem [ref=e44]:
+            - img [ref=e46]
+            - paragraph [ref=e48]: Salary Management
+        - link "Payslip" [ref=e49] [cursor=pointer]:
+          - /url: /payslip/EMP567
+          - listitem [ref=e50]:
+            - img [ref=e52]
+            - paragraph [ref=e54]: Payslip
+        - link "Resource Tracking" [ref=e55] [cursor=pointer]:
+          - /url: /resource_tracking
+          - listitem [ref=e56]:
+            - img [ref=e58]
+            - paragraph [ref=e61]: Resource Tracking
+        - link "Reimbursement" [ref=e62] [cursor=pointer]:
+          - /url: /reimbursement
+          - listitem [ref=e63]:
+            - img [ref=e65]
+            - paragraph [ref=e67]: Reimbursement
+        - link "Expenditure" [ref=e68] [cursor=pointer]:
+          - /url: /expenditure
+          - listitem [ref=e69]:
+            - img [ref=e71]
+            - paragraph [ref=e73]: Expenditure
+        - link "Policies" [ref=e74] [cursor=pointer]:
+          - /url: /policies
+          - listitem [ref=e75]:
+            - img [ref=e77]
+            - paragraph [ref=e79]: Policies
+        - link "Email Templates" [ref=e80] [cursor=pointer]:
+          - /url: /email_templates
+          - listitem [ref=e81]:
+            - img [ref=e83]
+            - paragraph [ref=e85]: Email Templates
+        - listitem [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]:
+            - img [ref=e90]
+            - paragraph [ref=e93]: Billing
+          - img [ref=e95]
+      - separator [ref=e98]
+      - list [ref=e99]:
+        - link "Your Profile" [ref=e100] [cursor=pointer]:
+          - /url: /profile
+          - listitem [ref=e101]:
+            - img [ref=e103]
+            - paragraph [ref=e106]: Your Profile
+        - link "Leave Overview" [ref=e107] [cursor=pointer]:
+          - /url: /LeavesOverview
+          - listitem [ref=e108]:
+            - img [ref=e110]
+            - paragraph [ref=e112]: Leave Overview
+        - link "Settings" [ref=e113] [cursor=pointer]:
+          - /url: /settings
+          - listitem [ref=e114]:
+            - img [ref=e116]
+            - paragraph [ref=e119]: Settings
+        - listitem [ref=e120]:
+          - img [ref=e122]
+          - paragraph [ref=e125]: Logout
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - paragraph [ref=e128]: Employees
+        - generic [ref=e129]:
+          - button "Import Excel Sheet" [ref=e130] [cursor=pointer]
+          - button "Export Data" [ref=e132] [cursor=pointer]
+          - button "Add Employee" [ref=e133] [cursor=pointer]
+      - generic [ref=e134]:
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - button "Active" [ref=e137] [cursor=pointer]
+          - listitem [ref=e138]:
+            - button "Released" [ref=e139] [cursor=pointer]
+        - generic [ref=e143]:
+          - treegrid [ref=e144]:
+            - generic [ref=e145]:
+              - row "EMP ID NAME" [ref=e146]:
+                - columnheader "EMP ID" [ref=e147]:
+                  - text: 
+                  - generic [ref=e148]: 
+                  - generic [ref=e149] [cursor=pointer]: EMP ID
+                  - text: 
+                  - generic:    
+                - columnheader "NAME" [ref=e150]:
+                  - text: 
+                  - generic [ref=e151]: 
+                  - generic [ref=e152]: NAME
+                  - text: 
+                  - generic: 
+                - columnheader [ref=e153]:
+                  - generic [ref=e154]:
+                    - checkbox [ref=e155]
+                    - text: 
+                  - text: 
+                  - generic: 
+                - columnheader [ref=e156]:
+                  - text: 
+                  - text: 
+                  - generic: 
+                - columnheader [ref=e157]:
+                  - text: 
+                  - text: 
+                  - generic: 
+                - columnheader [ref=e158]:
+                  - text: 
+                  - text: 
+                  - generic: 
+              - row "Open Filter Menu Open Filter Menu" [ref=e159]:
+                - gridcell "Open Filter Menu" [ref=e160]:
+                  - textbox "EMP ID Filter Input" [ref=e161]
+                  - button "Open Filter Menu" [ref=e163] [cursor=pointer]: 
+                - gridcell "Open Filter Menu" [ref=e164]:
+                  - textbox "NAME Filter Input" [ref=e165]
+                  - button "Open Filter Menu" [ref=e167] [cursor=pointer]: 
+                - gridcell [ref=e168]
+                - gridcell [ref=e169]
+                - gridcell [ref=e170]
+                - gridcell [ref=e171]
+            - rowgroup [ref=e172]:
+              - row "EMAIL ROLE DESIGNATION" [ref=e173]:
+                - columnheader "EMAIL" [ref=e174]:
+                  - text: 
+                  - generic [ref=e175]: 
+                  - generic [ref=e176]: EMAIL
+                  - text: 
+                  - generic: 
+                - columnheader "ROLE" [ref=e177]:
+                  - text: 
+                  - generic [ref=e178]: 
+                  - generic [ref=e179]: ROLE
+                  - text: 
+                  - generic: 
+                - columnheader "DESIGNATION" [ref=e180]:
+                  - text: 
+                  - generic [ref=e181]: 
+                  - generic [ref=e182]: DESIGNATION
+                  - text: 
+                  - generic: 
+              - row "Open Filter Menu Open Filter Menu Open Filter Menu" [ref=e183]:
+                - gridcell "Open Filter Menu" [ref=e184]:
+                  - textbox "EMAIL Filter Input" [ref=e185]
+                  - button "Open Filter Menu" [ref=e187] [cursor=pointer]: 
+                - gridcell "Open Filter Menu" [ref=e188]:
+                  - textbox "ROLE Filter Input" [ref=e189]
+                  - button "Open Filter Menu" [ref=e191] [cursor=pointer]: 
+                - gridcell "Open Filter Menu" [ref=e192]:
+                  - textbox "DESIGNATION Filter Input" [ref=e193]
+                  - button "Open Filter Menu" [ref=e195] [cursor=pointer]: 
+            - rowgroup [ref=e196]:
+              - row "Press SPACE to select this row." [ref=e197]:
+                - gridcell "0w00841" [ref=e198]
+                - gridcell "Tejaswini Tejaswini" [ref=e199]:
+                  - paragraph [ref=e200]: Tejaswini Tejaswini
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e201]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e202]
+                  - text: 
+                - gridcell [ref=e203]:
+                  - img [ref=e204] [cursor=pointer]
+                - gridcell [ref=e206]:
+                  - img [ref=e207] [cursor=pointer]
+                - gridcell "Profile" [ref=e209]:
+                  - img "Profile" [ref=e211] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e212]:
+                - gridcell "OWSS01" [ref=e213]
+                - gridcell "Suresh Salloju" [ref=e214]:
+                  - paragraph [ref=e215]: Suresh Salloju
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e216]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e217]
+                  - text: 
+                - gridcell [ref=e218]:
+                  - img [ref=e219] [cursor=pointer]
+                - gridcell [ref=e221]:
+                  - img [ref=e222] [cursor=pointer]
+                - gridcell "Profile" [ref=e224]:
+                  - img "Profile" [ref=e226] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e227]:
+                - gridcell "OWHP001" [ref=e228]
+                - gridcell "Happy Birthday" [ref=e229]:
+                  - paragraph [ref=e230]: Happy Birthday
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e231]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e232]
+                  - text: 
+                - gridcell [ref=e233]:
+                  - img [ref=e234] [cursor=pointer]
+                - gridcell [ref=e236]:
+                  - img [ref=e237] [cursor=pointer]
+                - gridcell "Profile" [ref=e239]:
+                  - img "Profile" [ref=e241] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e242]:
+                - gridcell "EMPIDC1" [ref=e243]
+                - gridcell "Qaqa Qaqa" [ref=e244]:
+                  - paragraph [ref=e245]: Qaqa Qaqa
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e246]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e247]
+                  - text: 
+                - gridcell [ref=e248]:
+                  - img [ref=e249] [cursor=pointer]
+                - gridcell [ref=e251]:
+                  - img [ref=e252] [cursor=pointer]
+                - gridcell "Profile" [ref=e254]:
+                  - img "Profile" [ref=e256] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e257]:
+                - gridcell "GJZXV2" [ref=e258]
+                - gridcell "Jordan Gislaso" [ref=e259]:
+                  - paragraph [ref=e260]: Jordan Gislaso
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e261]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e262]
+                  - text: 
+                - gridcell [ref=e263]:
+                  - img [ref=e264] [cursor=pointer]
+                - gridcell [ref=e266]:
+                  - img [ref=e267] [cursor=pointer]
+                - gridcell "Profile" [ref=e269]:
+                  - img "Profile" [ref=e271] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e272]:
+                - gridcell "MYJOW4" [ref=e273]
+                - gridcell "Marilie Bradtke" [ref=e274]:
+                  - paragraph [ref=e275]: Marilie Bradtke
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e276]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e277]
+                  - text: 
+                - gridcell [ref=e278]:
+                  - img [ref=e279] [cursor=pointer]
+                - gridcell [ref=e281]:
+                  - img [ref=e282] [cursor=pointer]
+                - gridcell "Profile" [ref=e284]:
+                  - img "Profile" [ref=e286] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e287]:
+                - gridcell "emp05e4" [ref=e288]
+                - gridcell "Priyaa Priyaa" [ref=e289]:
+                  - paragraph [ref=e290]: Priyaa Priyaa
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e291]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e292]
+                  - text: 
+                - gridcell [ref=e293]:
+                  - img [ref=e294] [cursor=pointer]
+                - gridcell [ref=e296]:
+                  - img [ref=e297] [cursor=pointer]
+                - gridcell "Profile" [ref=e299]:
+                  - img "Profile" [ref=e301] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e302]:
+                - gridcell "N7ZHHW" [ref=e303]
+                - gridcell "Alana Purdy" [ref=e304]:
+                  - paragraph [ref=e305]: Alana Purdy
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e306]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e307]
+                  - text: 
+                - gridcell [ref=e308]:
+                  - img [ref=e309] [cursor=pointer]
+                - gridcell [ref=e311]:
+                  - img [ref=e312] [cursor=pointer]
+                - gridcell "Profile" [ref=e314]:
+                  - img "Profile" [ref=e316] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e317]:
+                - gridcell "BJW9KY" [ref=e318]
+                - gridcell "Marshall Von" [ref=e319]:
+                  - paragraph [ref=e320]: Marshall Von
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e321]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e322]
+                  - text: 
+                - gridcell [ref=e323]:
+                  - img [ref=e324] [cursor=pointer]
+                - gridcell [ref=e326]:
+                  - img [ref=e327] [cursor=pointer]
+                - gridcell "Profile" [ref=e329]:
+                  - img "Profile" [ref=e331] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e332]:
+                - gridcell "EMP09" [ref=e333]
+                - gridcell "Qqqq Qqqq" [ref=e334]:
+                  - paragraph [ref=e335]: Qqqq Qqqq
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e336]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e337]
+                  - text: 
+                - gridcell [ref=e338]:
+                  - img [ref=e339] [cursor=pointer]
+                - gridcell [ref=e341]:
+                  - img [ref=e342] [cursor=pointer]
+                - gridcell "Profile" [ref=e344]:
+                  - img "Profile" [ref=e346] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e347]:
+                - gridcell "OS0051" [ref=e348]
+                - gridcell "Harish Reddy" [ref=e349]:
+                  - paragraph [ref=e350]: Harish Reddy
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e351]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e352]
+                  - text: 
+                - gridcell [ref=e353]:
+                  - img [ref=e354] [cursor=pointer]
+                - gridcell [ref=e356]:
+                  - img [ref=e357] [cursor=pointer]
+                - gridcell "Profile" [ref=e359]:
+                  - img "Profile" [ref=e361] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e362]:
+                - gridcell "empid60" [ref=e363]
+                - gridcell "Kali Path" [ref=e364]:
+                  - paragraph [ref=e365]: Kali Path
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e366]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e367]
+                  - text: 
+                - gridcell [ref=e368]:
+                  - img [ref=e369] [cursor=pointer]
+                - gridcell [ref=e371]:
+                  - img [ref=e372] [cursor=pointer]
+                - gridcell "Profile" [ref=e374]:
+                  - img "Profile" [ref=e376] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e377]:
+                - gridcell "OW071" [ref=e378]
+                - gridcell "Charan Pydimarri" [ref=e379]:
+                  - paragraph [ref=e380]: Charan Pydimarri
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e381]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e382]
+                  - text: 
+                - gridcell [ref=e383]:
+                  - img [ref=e384] [cursor=pointer]
+                - gridcell [ref=e386]:
+                  - img [ref=e387] [cursor=pointer]
+                - gridcell "Profile" [ref=e389]:
+                  - img "Profile" [ref=e391] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e392]:
+                - gridcell "BZYG77" [ref=e393]
+                - gridcell "Karl Mosciski" [ref=e394]:
+                  - paragraph [ref=e395]: Karl Mosciski
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e396]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e397]
+                  - text: 
+                - gridcell [ref=e398]:
+                  - img [ref=e399] [cursor=pointer]
+                - gridcell [ref=e401]:
+                  - img [ref=e402] [cursor=pointer]
+                - gridcell "Profile" [ref=e404]:
+                  - img "Profile" [ref=e406] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e407]:
+                - gridcell "OW082" [ref=e408]
+                - gridcell "Pooja Pooja" [ref=e409]:
+                  - paragraph [ref=e410]: Pooja Pooja
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e411]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e412]
+                  - text: 
+                - gridcell [ref=e413]:
+                  - img [ref=e414] [cursor=pointer]
+                - gridcell [ref=e416]:
+                  - img [ref=e417] [cursor=pointer]
+                - gridcell "Profile" [ref=e419]:
+                  - img "Profile" [ref=e421] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e422]:
+                - gridcell "OS0088" [ref=e423]
+                - gridcell "John Smith" [ref=e424]:
+                  - paragraph [ref=e425]: John Smith
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e426]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e427]
+                  - text: 
+                - gridcell [ref=e428]:
+                  - img [ref=e429] [cursor=pointer]
+                - gridcell [ref=e431]:
+                  - img [ref=e432] [cursor=pointer]
+                - gridcell "Profile" [ref=e434]:
+                  - img "Profile" [ref=e436] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e437]:
+                - gridcell "OS0089" [ref=e438]
+                - gridcell "John Smith1" [ref=e439]:
+                  - paragraph [ref=e440]: John Smith1
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e441]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e442]
+                  - text: 
+                - gridcell [ref=e443]:
+                  - img [ref=e444] [cursor=pointer]
+                - gridcell [ref=e446]:
+                  - img [ref=e447] [cursor=pointer]
+                - gridcell "Profile" [ref=e449]:
+                  - img "Profile" [ref=e451] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e452]:
+                - gridcell "OS0090" [ref=e453]
+                - gridcell "John Smith2" [ref=e454]:
+                  - paragraph [ref=e455]: John Smith2
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e456]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e457]
+                  - text: 
+                - gridcell [ref=e458]:
+                  - img [ref=e459] [cursor=pointer]
+                - gridcell [ref=e461]:
+                  - img [ref=e462] [cursor=pointer]
+                - gridcell "Profile" [ref=e464]:
+                  - img "Profile" [ref=e466] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e467]:
+                - gridcell "OS0091" [ref=e468]
+                - gridcell "John Smith3" [ref=e469]:
+                  - paragraph [ref=e470]: John Smith3
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e471]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e472]
+                  - text: 
+                - gridcell [ref=e473]:
+                  - img [ref=e474] [cursor=pointer]
+                - gridcell [ref=e476]:
+                  - img [ref=e477] [cursor=pointer]
+                - gridcell "Profile" [ref=e479]:
+                  - img "Profile" [ref=e481] [cursor=pointer]
+              - row "Press SPACE to select this row." [ref=e482]:
+                - gridcell "os0122" [ref=e483]
+                - gridcell "Dileep Gedela" [ref=e484]:
+                  - paragraph [ref=e485]: Dileep Gedela
+                - gridcell "Press Space to toggle row selection (unchecked) " [ref=e486]:
+                  - checkbox "Press Space to toggle row selection (unchecked)" [ref=e487]
+                  - text: 
+                - gridcell [ref=e488]:
+                  - img [ref=e489] [cursor=pointer]
+                - gridcell [ref=e491]:
+                  - img [ref=e492] [cursor=pointer]
+                - gridcell "Profile" [ref=e494]:
+                  - img "Profile" [ref=e496] [cursor=pointer]
+            - rowgroup [ref=e497]:
+              - row "Press SPACE to select this row." [ref=e498]:
+                - gridcell "tejaswini2@gmail.com" [ref=e499]
+                - gridcell "Admin" [ref=e500]
+                - gridcell "Test engineer" [ref=e501]
+              - row "Press SPACE to select this row." [ref=e502]:
+                - gridcell "sureshsalloju@openskale.com" [ref=e503]
+                - gridcell "Admin" [ref=e504]
+                - gridcell "Founder" [ref=e505]
+              - row "Press SPACE to select this row." [ref=e506]:
+                - gridcell "happy.birthday@gmail.com" [ref=e507]
+                - gridcell "Admin" [ref=e508]
+                - gridcell "JSTE" [ref=e509]
+              - row "Press SPACE to select this row." [ref=e510]:
+                - gridcell "js123@optimworks.com" [ref=e511]
+                - gridcell "Employee" [ref=e512]
+                - gridcell "wsws" [ref=e513]
+              - row "Press SPACE to select this row." [ref=e514]:
+                - gridcell "willie.prosacco16@hotmail.com" [ref=e515]
+                - gridcell "HR" [ref=e516]
+                - gridcell "Principal Intranet Orchestrator" [ref=e517]
+              - row "Press SPACE to select this row." [ref=e518]:
+                - gridcell "beatrice_langosh@hotmail.com" [ref=e519]
+                - gridcell "HR" [ref=e520]
+                - gridcell "Lead Accountability Supervisor" [ref=e521]
+              - row "Press SPACE to select this row." [ref=e522]:
+                - gridcell "priyaa05e3@gmail.com" [ref=e523]
+                - gridcell "HR" [ref=e524]
+                - gridcell "mychoice" [ref=e525]
+              - row "Press SPACE to select this row." [ref=e526]:
+                - gridcell "beth_bahringer@gmail.com" [ref=e527]
+                - gridcell "HR" [ref=e528]
+                - gridcell "Human Creative Specialist" [ref=e529]
+              - row "Press SPACE to select this row." [ref=e530]:
+                - gridcell "carrie.conn28@gmail.com" [ref=e531]
+                - gridcell "HR" [ref=e532]
+                - gridcell "Future Solutions Supervisor" [ref=e533]
+              - row "Press SPACE to select this row." [ref=e534]:
+                - gridcell "jsr123@works.com" [ref=e535]
+                - gridcell "Employee" [ref=e536]
+                - gridcell "wer" [ref=e537]
+              - row "Press SPACE to select this row." [ref=e538]:
+                - gridcell "harish123@gmail.com" [ref=e539]
+                - gridcell "Employee" [ref=e540]
+                - gridcell "Sr Developer" [ref=e541]
+              - row "Press SPACE to select this row." [ref=e542]:
+                - gridcell "kali@optimworks.com" [ref=e543]
+                - gridcell "Admin" [ref=e544]
+                - gridcell "Test Engineer" [ref=e545]
+              - row "Press SPACE to select this row." [ref=e546]:
+                - gridcell "charanpydimarri@optimworks.com" [ref=e547]
+                - gridcell "Admin" [ref=e548]
+                - gridcell "JSTE" [ref=e549]
+              - row "Press SPACE to select this row." [ref=e550]:
+                - gridcell "billy_sanford@hotmail.com" [ref=e551]
+                - gridcell "HR" [ref=e552]
+                - gridcell "Senior Marketing Analyst" [ref=e553]
+              - row "Press SPACE to select this row." [ref=e554]:
+                - gridcell "poojabollam.bollam@optimworks.com" [ref=e555]
+                - gridcell "Admin" [ref=e556]
+                - gridcell "QA ENGINEER" [ref=e557]
+              - row "Press SPACE to select this row." [ref=e558]:
+                - gridcell "johnsmith123@abc.com" [ref=e559]
+                - gridcell "Employee/Lead/HR" [ref=e560]
+                - gridcell "Software Engineer" [ref=e561]
+              - row "Press SPACE to select this row." [ref=e562]:
+                - gridcell "johnsmith1234444@getnada.com" [ref=e563]
+                - gridcell "Employee/Lead/HR" [ref=e564]
+                - gridcell "Software Engineer" [ref=e565]
+              - row "Press SPACE to select this row." [ref=e566]:
+                - gridcell "johnsmith1234445@getnada.com" [ref=e567]
+                - gridcell "Employee/Lead/HR" [ref=e568]
+                - gridcell "Software Engineer" [ref=e569]
+              - row "Press SPACE to select this row." [ref=e570]:
+                - gridcell "johnsmith1234449@getnada.com" [ref=e571]
+                - gridcell "Employee/Lead/HR" [ref=e572]
+                - gridcell "Software Engineer" [ref=e573]
+              - row "Press SPACE to select this row." [ref=e574]:
+                - gridcell "dileepgedela18@gmail.com" [ref=e575]
+                - gridcell "Admin" [ref=e576]
+                - gridcell "Software Developer" [ref=e577]
+          - generic [ref=e586]:
+            - status [ref=e587]: 1 to 20 of 83
+            - button "First Page" [disabled] [ref=e588]: 
+            - button "Previous Page" [disabled] [ref=e589]: 
+            - status [ref=e590]: Page 1 of 5
+            - button "Next Page" [ref=e591] [cursor=pointer]: 
+            - button "Last Page" [ref=e592] [cursor=pointer]: 
+```
