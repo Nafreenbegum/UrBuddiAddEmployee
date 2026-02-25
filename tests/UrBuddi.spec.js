@@ -5,31 +5,36 @@ import { generateEmployee } from '../utils/fakerData.js';
 
 const { getLoginData } = require('../utils/excelReader');
 
-test('Login → Add Employee Flow', async ({ page }) => {
-  // 📘 Read login details from Excel
+test('Login → Add → Delete Employee Flow', async ({ page }) => {
+
   const loginData = getLoginData();
 
   const loginPage = new LoginPage(page);
   const addEmployeePage = new AddEmployeePage(page);
 
-  // 🔐 Login
-  await loginPage.login(
-    loginData.url,
-    loginData.email,
-    loginData.password
-  );
+  // Login
+  await test.step('Login to application', async () => {
+    await loginPage.login(
+      loginData.url,
+      loginData.email,
+      loginData.password
+    );
+  });
 
-  // ➕ Open Add Employee form
-  await addEmployeePage.openAddEmployeeForm();
+  //  Generate employee (no await needed)
+  const employee = generateEmployee();
 
-  // 🎲 Generate fake employee data
-  const employee = await generateEmployee();
+  // Add Employee
+  await test.step('Add new employee', async () => {
+    await addEmployeePage.openAddEmployeeForm();
+    await addEmployeePage.addEmployee(employee);
+    await addEmployeePage.submitAndValidate();
+  });
 
-  // 📝 Fill employee form
-  await addEmployeePage.addEmployee(employee);
-
-  // 💾 Submit and validate both status + grid
-  await addEmployeePage.submitAndValidate();
-
-  console.log("✅ Employee Created & Verified:", employee.firstName, employee.employeeId);
+  // Delete Employee
+  await test.step('Delete created employee', async () => {
+    await addEmployeePage.deleteEmployee();
+    await addEmployeePage.validateEmployeeDeleted();
+  });
+await addEmployeePage.importEmployeeExcel('testdata/sample_employee_details_T001.xlsx');
 });
