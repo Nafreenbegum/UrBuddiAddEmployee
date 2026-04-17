@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:urbuddi": "playwright test tests/UrBuddi.spec.js",
+    "test:urbuddi:headed": "playwright test tests/UrBuddi.spec.js --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

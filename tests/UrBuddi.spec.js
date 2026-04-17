@@ -3,12 +3,11 @@ import { LoginPage } from '../pages/LoginPage.js';
 import { AddEmployeePage } from '../pages/AddEmployeePage.js';
 import { generateEmployee } from '../utils/fakerData.js';
 
-const { getLoginData } = require('../utils/excelReader');
+import { getLoginData } from '../Utils/excelReader.js';
 
 test('Login → Add → Delete Employee Flow', async ({ page }) => {
 
   const loginData = getLoginData();
-
   const loginPage = new LoginPage(page);
   const addEmployeePage = new AddEmployeePage(page);
 
