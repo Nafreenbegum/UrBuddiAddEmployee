@@ -37,10 +37,17 @@ function generateEmployee() {
     // ✅ Format: EMP1234
     employeeId: generateUniqueEmpId(),
 
+    // ✅ Work email
     email: faker.internet.email({
       firstName,
       lastName
     }).toLowerCase(),
+
+    // ✅ Personal email (Gmail format)
+    personalEmail: `${faker.internet.username().toLowerCase()}@gmail.com`,
+
+    // ✅ Past Experience (1 to 5 years)
+    pastExperience: faker.number.int({ min: 1, max: 5 }).toString(),
 
     ...employeeStaticData
   };

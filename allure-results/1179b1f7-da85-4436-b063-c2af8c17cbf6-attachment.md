@@ -1,0 +1,234 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e4]:
+    - link "logo" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img "logo" [ref=e6]
+    - generic [ref=e7]:
+      - button "3" [ref=e8] [cursor=pointer]:
+        - img [ref=e10]
+        - paragraph [ref=e12]: "3"
+      - button "profile-pic" [ref=e13] [cursor=pointer]:
+        - link "profile-pic" [ref=e14]:
+          - /url: /profile
+          - img "profile-pic" [ref=e15]
+  - generic [ref=e16]:
+    - navigation [ref=e18]:
+      - list [ref=e19]:
+        - listitem [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - link "Dashboard" [ref=e23] [cursor=pointer]:
+          - /url: /
+          - listitem [ref=e24]:
+            - img [ref=e26]
+            - paragraph [ref=e29]: Dashboard
+        - link "Employees" [ref=e30] [cursor=pointer]:
+          - /url: /allemployees
+          - listitem [ref=e31]:
+            - img [ref=e33]
+            - paragraph [ref=e36]: Employees
+        - link "Leave Management" [ref=e37] [cursor=pointer]:
+          - /url: /leave_management
+          - listitem [ref=e38]:
+            - img [ref=e40]
+            - paragraph [ref=e42]: Leave Management
+        - link "Salary Management" [ref=e43] [cursor=pointer]:
+          - /url: /salary
+          - listitem [ref=e44]:
+            - img [ref=e46]
+            - paragraph [ref=e48]: Salary Management
+        - link "Payslip" [ref=e49] [cursor=pointer]:
+          - /url: /payslip/OWI116
+          - listitem [ref=e50]:
+            - img [ref=e52]
+            - paragraph [ref=e54]: Payslip
+        - link "Resource Tracking" [ref=e55] [cursor=pointer]:
+          - /url: /resource_tracking
+          - listitem [ref=e56]:
+            - img [ref=e58]
+            - paragraph [ref=e61]: Resource Tracking
+        - link "Reimbursement" [ref=e62] [cursor=pointer]:
+          - /url: /reimbursement
+          - listitem [ref=e63]:
+            - img [ref=e65]
+            - paragraph [ref=e67]: Reimbursement
+        - link "Expenditure" [ref=e68] [cursor=pointer]:
+          - /url: /expenditure
+          - listitem [ref=e69]:
+            - img [ref=e71]
+            - paragraph [ref=e73]: Expenditure
+        - link "Policies" [ref=e74] [cursor=pointer]:
+          - /url: /policies
+          - listitem [ref=e75]:
+            - img [ref=e77]
+            - paragraph [ref=e79]: Policies
+        - link "Email Templates" [ref=e80] [cursor=pointer]:
+          - /url: /email_templates
+          - listitem [ref=e81]:
+            - img [ref=e83]
+            - paragraph [ref=e86]: Email Templates
+        - listitem [ref=e88] [cursor=pointer]:
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - paragraph [ref=e94]: Billing
+          - img [ref=e96]
+      - separator [ref=e99]
+      - list [ref=e100]:
+        - link "Your Profile" [ref=e101] [cursor=pointer]:
+          - /url: /profile
+          - listitem [ref=e102]:
+            - img [ref=e104]
+            - paragraph [ref=e107]: Your Profile
+        - link "Settings" [ref=e108] [cursor=pointer]:
+          - /url: /settings
+          - listitem [ref=e109]:
+            - img [ref=e111]
+            - paragraph [ref=e114]: Settings
+        - listitem [ref=e115]:
+          - img [ref=e117]
+          - paragraph [ref=e120]: Logout
+    - generic [ref=e121]:
+      - generic [ref=e122]:
+        - paragraph [ref=e123]: Leave Management
+        - button "Apply Leave" [ref=e124] [cursor=pointer]
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - paragraph [ref=e128]: "8"
+          - paragraph [ref=e129]: Yearly Total
+        - generic [ref=e130]:
+          - paragraph [ref=e131]: "8"
+          - paragraph [ref=e132]: Yearly Balance
+        - generic [ref=e133]:
+          - paragraph [ref=e134]: "0"
+          - paragraph [ref=e135]: Yearly Utilized
+        - generic [ref=e136]:
+          - paragraph [ref=e137]: "0"
+          - paragraph [ref=e138]: Leaves Left Upto APR
+        - generic [ref=e139]:
+          - paragraph [ref=e140]: "0"
+          - paragraph [ref=e141]: Extra Work In APR
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - button "Your History" [ref=e144] [cursor=pointer]
+          - button "Requests" [ref=e145] [cursor=pointer]
+          - button "All History" [ref=e146] [cursor=pointer]
+          - button "Summary" [ref=e147] [cursor=pointer]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153]: Start Month
+              - textbox [ref=e156]: April 2026
+            - generic [ref=e157]:
+              - generic [ref=e158]: End Month
+              - textbox [ref=e161]: April 2026
+          - generic [ref=e164]:
+            - treegrid [ref=e165]:
+              - generic [ref=e166]:
+                - row "START DATE END DATE REQUEST DAYS REQUEST TYPE" [ref=e167]:
+                  - columnheader "START DATE" [ref=e168]:
+                    - text: 
+                    - generic [ref=e169]: 
+                    - generic [ref=e170]: START DATE
+                    - text: 
+                    - generic: 
+                  - columnheader "END DATE" [ref=e171]:
+                    - text: 
+                    - generic [ref=e172]: 
+                    - generic [ref=e173]: END DATE
+                    - text: 
+                    - generic: 
+                  - columnheader "REQUEST DAYS" [ref=e174]:
+                    - text: 
+                    - generic [ref=e175]: 
+                    - generic [ref=e176]: REQUEST DAYS
+                    - text: 
+                    - generic: 
+                  - columnheader "REQUEST TYPE" [ref=e177]:
+                    - text: 
+                    - generic [ref=e178]: 
+                    - generic [ref=e179]: REQUEST TYPE
+                    - text: 
+                    - generic: 
+                - row "Open Filter Menu Open Filter Menu Open Filter Menu Open Filter Menu" [ref=e180]:
+                  - gridcell "Open Filter Menu" [ref=e181]:
+                    - textbox "START DATE Filter Input" [ref=e182]
+                    - button "Open Filter Menu" [ref=e184] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e185]:
+                    - textbox "END DATE Filter Input" [ref=e186]
+                    - button "Open Filter Menu" [ref=e188] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e189]:
+                    - textbox "REQUEST DAYS Filter Input" [ref=e190]
+                    - button "Open Filter Menu" [ref=e192] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e193]:
+                    - textbox "REQUEST TYPE Filter Input" [ref=e194]
+                    - button "Open Filter Menu" [ref=e196] [cursor=pointer]: 
+              - rowgroup [ref=e197]:
+                - row "STATUS REASON FOR LEAVE" [ref=e198]:
+                  - columnheader "STATUS" [ref=e199]:
+                    - text: 
+                    - generic [ref=e200]: 
+                    - generic [ref=e201]: STATUS
+                    - text: 
+                    - generic: 
+                  - columnheader "REASON FOR LEAVE" [ref=e202]:
+                    - text: 
+                    - generic [ref=e203]: 
+                    - generic [ref=e204]: REASON FOR LEAVE
+                    - text: 
+                    - generic: 
+                - row "Open Filter Menu Open Filter Menu" [ref=e205]:
+                  - gridcell "Open Filter Menu" [ref=e206]:
+                    - textbox "STATUS Filter Input" [ref=e207]
+                    - button "Open Filter Menu" [ref=e209] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e210]:
+                    - textbox "REASON FOR LEAVE Filter Input" [ref=e211]
+                    - button "Open Filter Menu" [ref=e213] [cursor=pointer]: 
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: No Rows To Show
+            - generic [ref=e218]:
+              - status [ref=e219]: 0 to 0 of 0
+              - button "First Page" [disabled] [ref=e220]: 
+              - button "Previous Page" [disabled] [ref=e221]: 
+              - status [ref=e222]: Page 0 of 0
+              - button "Next Page" [disabled] [ref=e223]: 
+              - button "Last Page" [disabled] [ref=e224]: 
+      - generic [ref=e225]:
+        - generic [ref=e226]:
+          - paragraph [ref=e227]: Apply Leave
+          - img [ref=e228] [cursor=pointer]
+        - generic [ref=e232]:
+          - generic [ref=e233]:
+            - generic [ref=e235]:
+              - textbox "From" [ref=e238]
+              - generic: From*
+            - generic [ref=e240]:
+              - textbox "To" [ref=e243]
+              - generic: To*
+          - paragraph [ref=e244]: "No of Days : 0"
+          - generic [ref=e246]:
+            - combobox [ref=e247] [cursor=pointer]:
+              - option "empuserempuser12@abc.com" [selected]
+            - generic: Select Lead*
+          - generic [ref=e249]:
+            - textbox [ref=e250]: suscipio cuppedia dolore
+            - generic: Subject*
+          - generic [ref=e252]:
+            - textbox [ref=e253]: Basium combibo denuncio canis caritas.
+            - generic: Reason For Leave*
+          - generic [ref=e254]:
+            - generic [ref=e255]: Select request type*
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - radio "Leave" [ref=e258]
+                - generic [ref=e259]: Leave
+              - generic [ref=e260]:
+                - radio "Work from Home" [checked] [active] [ref=e261]
+                - generic [ref=e262]: Work from Home
+          - generic [ref=e263]:
+            - button "Cancel" [ref=e264] [cursor=pointer]
+            - button "Submit" [disabled] [ref=e266]
+```

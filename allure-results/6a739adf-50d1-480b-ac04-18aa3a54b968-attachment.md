@@ -1,0 +1,303 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - navigation [ref=e4]:
+    - link "logo" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img "logo" [ref=e6]
+    - generic [ref=e7]:
+      - button [ref=e8] [cursor=pointer]:
+        - img [ref=e10]
+      - button "profile-pic" [ref=e12] [cursor=pointer]:
+        - link "profile-pic" [ref=e13]:
+          - /url: /profile
+          - img "profile-pic" [ref=e14]
+  - generic [ref=e15]:
+    - navigation [ref=e17]:
+      - list [ref=e18]:
+        - listitem [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+        - link "Dashboard" [ref=e22] [cursor=pointer]:
+          - /url: /
+          - listitem [ref=e23]:
+            - img [ref=e25]
+            - paragraph [ref=e28]: Dashboard
+        - link "Employees" [ref=e29] [cursor=pointer]:
+          - /url: /allemployees
+          - listitem [ref=e30]:
+            - img [ref=e32]
+            - paragraph [ref=e35]: Employees
+        - link "Leave Management" [ref=e36] [cursor=pointer]:
+          - /url: /leave_management
+          - listitem [ref=e37]:
+            - img [ref=e39]
+            - paragraph [ref=e41]: Leave Management
+        - link "Salary Management" [ref=e42] [cursor=pointer]:
+          - /url: /salary
+          - listitem [ref=e43]:
+            - img [ref=e45]
+            - paragraph [ref=e47]: Salary Management
+        - link "Payslip" [ref=e48] [cursor=pointer]:
+          - /url: /payslip/OWI116
+          - listitem [ref=e49]:
+            - img [ref=e51]
+            - paragraph [ref=e53]: Payslip
+        - link "Resource Tracking" [ref=e54] [cursor=pointer]:
+          - /url: /resource_tracking
+          - listitem [ref=e55]:
+            - img [ref=e57]
+            - paragraph [ref=e60]: Resource Tracking
+        - link "Reimbursement" [ref=e61] [cursor=pointer]:
+          - /url: /reimbursement
+          - listitem [ref=e62]:
+            - img [ref=e64]
+            - paragraph [ref=e66]: Reimbursement
+        - link "Expenditure" [ref=e67] [cursor=pointer]:
+          - /url: /expenditure
+          - listitem [ref=e68]:
+            - img [ref=e70]
+            - paragraph [ref=e72]: Expenditure
+        - link "Policies" [ref=e73] [cursor=pointer]:
+          - /url: /policies
+          - listitem [ref=e74]:
+            - img [ref=e76]
+            - paragraph [ref=e78]: Policies
+        - link "Email Templates" [ref=e79] [cursor=pointer]:
+          - /url: /email_templates
+          - listitem [ref=e80]:
+            - img [ref=e82]
+            - paragraph [ref=e85]: Email Templates
+        - listitem [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]:
+            - img [ref=e90]
+            - paragraph [ref=e93]: Billing
+          - img [ref=e95]
+      - separator [ref=e98]
+      - list [ref=e99]:
+        - link "Your Profile" [ref=e100] [cursor=pointer]:
+          - /url: /profile
+          - listitem [ref=e101]:
+            - img [ref=e103]
+            - paragraph [ref=e106]: Your Profile
+        - link "Settings" [ref=e107] [cursor=pointer]:
+          - /url: /settings
+          - listitem [ref=e108]:
+            - img [ref=e110]
+            - paragraph [ref=e113]: Settings
+        - listitem [ref=e114]:
+          - img [ref=e116]
+          - paragraph [ref=e119]: Logout
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - paragraph [ref=e122]: Leave Management
+        - button "Apply Leave" [ref=e123] [cursor=pointer]
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - paragraph [ref=e127]: "8"
+          - paragraph [ref=e128]: Yearly Total
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: "8"
+          - paragraph [ref=e131]: Yearly Balance
+        - generic [ref=e132]:
+          - paragraph [ref=e133]: "0"
+          - paragraph [ref=e134]: Yearly Utilized
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: "0"
+          - paragraph [ref=e137]: Leaves Left Upto APR
+        - generic [ref=e138]:
+          - paragraph [ref=e139]: "0"
+          - paragraph [ref=e140]: Extra Work In APR
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - button "Your History" [ref=e143] [cursor=pointer]
+          - button "Requests" [ref=e144] [cursor=pointer]
+          - button "All History" [ref=e145] [cursor=pointer]
+          - button "Summary" [ref=e146] [cursor=pointer]
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: Start Month
+              - textbox [ref=e155]: April 2026
+            - generic [ref=e156]:
+              - generic [ref=e157]: End Month
+              - textbox [ref=e160]: April 2026
+          - generic [ref=e163]:
+            - treegrid [ref=e164]:
+              - generic [ref=e165]:
+                - row "START DATE END DATE REQUEST DAYS REQUEST TYPE" [ref=e166]:
+                  - columnheader "START DATE" [ref=e167]:
+                    - text: 
+                    - generic [ref=e168]: 
+                    - generic [ref=e169]: START DATE
+                    - text: 
+                    - generic: 
+                  - columnheader "END DATE" [ref=e170]:
+                    - text: 
+                    - generic [ref=e171]: 
+                    - generic [ref=e172]: END DATE
+                    - text: 
+                    - generic: 
+                  - columnheader "REQUEST DAYS" [ref=e173]:
+                    - text: 
+                    - generic [ref=e174]: 
+                    - generic [ref=e175]: REQUEST DAYS
+                    - text: 
+                    - generic: 
+                  - columnheader "REQUEST TYPE" [ref=e176]:
+                    - text: 
+                    - generic [ref=e177]: 
+                    - generic [ref=e178]: REQUEST TYPE
+                    - text: 
+                    - generic: 
+                - row "Open Filter Menu Open Filter Menu Open Filter Menu Open Filter Menu" [ref=e179]:
+                  - gridcell "Open Filter Menu" [ref=e180]:
+                    - textbox "START DATE Filter Input" [ref=e181]
+                    - button "Open Filter Menu" [ref=e183] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e184]:
+                    - textbox "END DATE Filter Input" [ref=e185]
+                    - button "Open Filter Menu" [ref=e187] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e188]:
+                    - textbox "REQUEST DAYS Filter Input" [ref=e189]
+                    - button "Open Filter Menu" [ref=e191] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e192]:
+                    - textbox "REQUEST TYPE Filter Input" [ref=e193]
+                    - button "Open Filter Menu" [ref=e195] [cursor=pointer]: 
+              - rowgroup [ref=e196]:
+                - row "STATUS REASON FOR LEAVE" [ref=e197]:
+                  - columnheader "STATUS" [ref=e198]:
+                    - text: 
+                    - generic [ref=e199]: 
+                    - generic [ref=e200]: STATUS
+                    - text: 
+                    - generic: 
+                  - columnheader "REASON FOR LEAVE" [ref=e201]:
+                    - text: 
+                    - generic [ref=e202]: 
+                    - generic [ref=e203]: REASON FOR LEAVE
+                    - text: 
+                    - generic: 
+                - row "Open Filter Menu Open Filter Menu" [ref=e204]:
+                  - gridcell "Open Filter Menu" [ref=e205]:
+                    - textbox "STATUS Filter Input" [ref=e206]
+                    - button "Open Filter Menu" [ref=e208] [cursor=pointer]: 
+                  - gridcell "Open Filter Menu" [ref=e209]:
+                    - textbox "REASON FOR LEAVE Filter Input" [ref=e210]
+                    - button "Open Filter Menu" [ref=e212] [cursor=pointer]: 
+              - rowgroup [ref=e213]:
+                - row "30-04-2026 30-04-2026 1 Leave" [ref=e214]:
+                  - gridcell "30-04-2026" [ref=e215]
+                  - gridcell "30-04-2026" [ref=e216]
+                  - gridcell "1" [ref=e217]
+                  - gridcell "Leave" [ref=e218]
+              - rowgroup [ref=e219]:
+                - row "Awaiting Acervus molestiae quia spoliatio." [ref=e220]:
+                  - gridcell "Awaiting" [ref=e221]
+                  - gridcell "Acervus molestiae quia spoliatio." [ref=e222]
+            - generic [ref=e227]:
+              - status [ref=e228]: 1 to 1 of 1
+              - button "First Page" [disabled] [ref=e229]: 
+              - button "Previous Page" [disabled] [ref=e230]: 
+              - status [ref=e231]: Page 1 of 1
+              - button "Next Page" [disabled] [ref=e232]: 
+              - button "Last Page" [disabled] [ref=e233]: 
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - paragraph [ref=e236]: Apply Leave
+          - img [ref=e237] [cursor=pointer]
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e244]:
+              - textbox "From" [ref=e247]: 08-05-2026
+              - generic: From*
+            - generic [ref=e249]:
+              - textbox "To" [ref=e252]: 2026-05-11
+              - generic [ref=e255]:
+                - alert [ref=e256]
+                - button "Previous Month" [ref=e257] [cursor=pointer]:
+                  - generic: Previous Month
+                - generic [ref=e258]:
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: May 2026
+                    - generic [ref=e261]:
+                      - generic [ref=e262]: Su
+                      - generic [ref=e263]: Mo
+                      - generic [ref=e264]: Tu
+                      - generic [ref=e265]: We
+                      - generic [ref=e266]: Th
+                      - generic [ref=e267]: Fr
+                      - generic [ref=e268]: Sa
+                  - listbox "month 2026-05" [ref=e269]:
+                    - generic [ref=e270]:
+                      - option "Not available Sunday, April 26th, 2026" [disabled] [ref=e271]: "26"
+                      - option "Choose Monday, April 27th, 2026" [ref=e272] [cursor=pointer]: "27"
+                      - option "Not available Tuesday, April 28th, 2026" [disabled] [ref=e273]: "28"
+                      - option "Choose Wednesday, April 29th, 2026" [ref=e274] [cursor=pointer]: "29"
+                      - option "Choose Thursday, April 30th, 2026" [ref=e275] [cursor=pointer]: "30"
+                      - option "Not available Friday, May 1st, 2026" [disabled] [ref=e276]: "1"
+                      - option "Not available Saturday, May 2nd, 2026" [disabled] [ref=e277]: "2"
+                    - generic [ref=e278]:
+                      - option "Not available Sunday, May 3rd, 2026" [disabled] [ref=e279]: "3"
+                      - option "Choose Monday, May 4th, 2026" [ref=e280] [cursor=pointer]: "4"
+                      - option "Choose Tuesday, May 5th, 2026" [ref=e281] [cursor=pointer]: "5"
+                      - option "Choose Wednesday, May 6th, 2026" [ref=e282] [cursor=pointer]: "6"
+                      - option "Choose Thursday, May 7th, 2026" [ref=e283] [cursor=pointer]: "7"
+                      - option "Choose Friday, May 8th, 2026" [ref=e284] [cursor=pointer]: "8"
+                      - option "Not available Saturday, May 9th, 2026" [disabled] [ref=e285]: "9"
+                    - generic [ref=e286]:
+                      - option "Not available Sunday, May 10th, 2026" [disabled] [ref=e287]: "10"
+                      - option "Choose Monday, May 11th, 2026" [active] [selected] [ref=e288] [cursor=pointer]: "11"
+                      - option "Choose Tuesday, May 12th, 2026" [ref=e289] [cursor=pointer]: "12"
+                      - option "Choose Wednesday, May 13th, 2026" [ref=e290] [cursor=pointer]: "13"
+                      - option "Choose Thursday, May 14th, 2026" [ref=e291] [cursor=pointer]: "14"
+                      - option "Choose Friday, May 15th, 2026" [ref=e292] [cursor=pointer]: "15"
+                      - option "Not available Saturday, May 16th, 2026" [disabled] [ref=e293]: "16"
+                    - generic [ref=e294]:
+                      - option "Not available Sunday, May 17th, 2026" [disabled] [ref=e295]: "17"
+                      - option "Choose Monday, May 18th, 2026" [ref=e296] [cursor=pointer]: "18"
+                      - option "Choose Tuesday, May 19th, 2026" [ref=e297] [cursor=pointer]: "19"
+                      - option "Choose Wednesday, May 20th, 2026" [ref=e298] [cursor=pointer]: "20"
+                      - option "Choose Thursday, May 21st, 2026" [ref=e299] [cursor=pointer]: "21"
+                      - option "Choose Friday, May 22nd, 2026" [ref=e300] [cursor=pointer]: "22"
+                      - option "Not available Saturday, May 23rd, 2026" [disabled] [ref=e301]: "23"
+                    - generic [ref=e302]:
+                      - option "Not available Sunday, May 24th, 2026" [disabled] [ref=e303]: "24"
+                      - option "Choose Monday, May 25th, 2026" [ref=e304] [cursor=pointer]: "25"
+                      - option "Choose Tuesday, May 26th, 2026" [ref=e305] [cursor=pointer]: "26"
+                      - option "Choose Wednesday, May 27th, 2026" [ref=e306] [cursor=pointer]: "27"
+                      - option "Choose Thursday, May 28th, 2026" [ref=e307] [cursor=pointer]: "28"
+                      - option "Choose Friday, May 29th, 2026" [ref=e308] [cursor=pointer]: "29"
+                      - option "Not available Saturday, May 30th, 2026" [disabled] [ref=e309]: "30"
+                    - generic [ref=e310]:
+                      - option "Not available Sunday, May 31st, 2026" [disabled] [ref=e311]: "31"
+                      - option "Not available Monday, June 1st, 2026" [disabled] [ref=e312]: "1"
+                      - option "Not available Tuesday, June 2nd, 2026" [disabled] [ref=e313]: "2"
+                      - option "Not available Wednesday, June 3rd, 2026" [disabled] [ref=e314]: "3"
+                      - option "Not available Thursday, June 4th, 2026" [disabled] [ref=e315]: "4"
+                      - option "Not available Friday, June 5th, 2026" [disabled] [ref=e316]: "5"
+                      - option "Not available Saturday, June 6th, 2026" [disabled] [ref=e317]: "6"
+              - generic: To*
+          - paragraph [ref=e318]: "No of Days : 2"
+          - generic [ref=e320]:
+            - combobox [ref=e321] [cursor=pointer]:
+              - option "empuserempuser12@abc.com" [selected]
+            - generic: Select Lead*
+          - generic [ref=e323]:
+            - textbox [ref=e324]
+            - generic: Subject*
+          - generic [ref=e326]:
+            - textbox [ref=e327]
+            - generic: Reason For Leave*
+          - generic [ref=e328]:
+            - generic [ref=e329]: Select request type*
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - radio "Leave" [ref=e332]
+                - generic [ref=e333]: Leave
+              - generic [ref=e334]:
+                - radio "Work from Home" [ref=e335]
+                - generic [ref=e336]: Work from Home
+          - generic [ref=e337]:
+            - button "Cancel" [ref=e338] [cursor=pointer]
+            - button "Submit" [disabled] [ref=e340]
+```
