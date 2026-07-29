@@ -1,7 +1,0 @@
-nafreen [
-  {
-    url: 'https://dev.urbuddi.com/login',
-    email: 'nafreenbegum123@optimworks.com',
-    password: 'Nafreen@123'
-  }
-]
