@@ -2,17 +2,17 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 
-  // Test folder
+  // Test Folder
   testDir: './tests',
 
   // Run tests in parallel
   fullyParallel: true,
 
-  // Number of workers
-  workers: 1,
-
   // Retry failed tests
   retries: 1,
+
+  // Number of workers
+  workers: 1,
 
   // Reporters
   reporter: [
@@ -20,33 +20,31 @@ export default defineConfig({
     ['allure-playwright']
   ],
 
-  // Common settings
   use: {
 
-    // Base URL
+    // Application URL
     baseURL: 'https://dev.urbuddi.com/',
 
-    // Browser Mode
+    // Run browser in headed mode
     headless: false,
 
-    // Capture screenshot only on failure
+    // Screenshot on failure
     screenshot: 'only-on-failure',
 
-    // Save trace on failure
+    // Trace on failure
     trace: 'retain-on-failure',
 
-    // Save video on failure
+    // Video on failure
     video: 'retain-on-failure',
 
-    // Maximum action timeout
+    // Action timeout
     actionTimeout: 15000,
 
-    // Maximum navigation timeout
+    // Navigation timeout
     navigationTimeout: 30000
 
   },
 
-  // Browser Configuration
   projects: [
 
     {
@@ -62,7 +60,7 @@ export default defineConfig({
 
     }
 
-    // Uncomment if required
+    // Uncomment if you want Firefox
 
     // {
     //   name: 'firefox',
